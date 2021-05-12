@@ -19,14 +19,14 @@
 }
 
 .container .left-column {
-    display: inline-block;
+    float: left;
     width: 50%;
     
 }
 
 .container .right-column{
-    display: inline-block;
     width: 50%;
+    float: right;
     
 }
 @media (max-width: 900px) {
@@ -41,6 +41,7 @@
     
     .container .right-column{
         width: 100%;
+        margin-top: 60px;
     }
 }
 @media (max-width: 640px) {
