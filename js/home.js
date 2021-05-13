@@ -1,2 +1,2 @@
-import {} from './components/clock.js';
-renderClock()
+import { renderClock} from './components/clock.js';
+renderClock('#hero_clock');
