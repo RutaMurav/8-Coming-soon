@@ -1,12 +1,15 @@
 import { formatNumber } from './formatNumber.js';
+import {calcDeadline} from './formatNumber.js';
+import {updateClock} from './updateClock.js';
 
-function renderClock(selector) {
+
+function renderClock(selector, targetDate) {
     // validation
 
     // logic
     const DOM = document.querySelector(selector);
 
-    const time = [432, 9, 37, 39];
+    const time = calcDeadline(targetDate);
     const titles = ['days', 'hours', 'minutes', 'seconds'];
     let HTML = '';
 
@@ -20,6 +23,12 @@ function renderClock(selector) {
 
     // result return
     DOM.innerHTML = HTML;
+
+    const allValueDOM = DOM.querySelectorAll('.value');
+
+   updateClock(allValueDOM, calcDeadline(targetDate));
+    //setInterval();
+
 }
 
-export { renderClock }
+export { renderClock };
