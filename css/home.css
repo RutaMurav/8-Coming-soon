@@ -2,6 +2,10 @@
 @import './basic/reset.css';
 @import './basic/variables.css';
 @import './basic/layout.css';
+
+/* 3rd-party */
+@import './3rd-party/font-awesome.min.css';
+
 /* component styles */
 @import './components/button.css';
 @import './components/clock.css';
@@ -34,14 +38,17 @@
   align-items: center;
   text-align: center;
 }
+
 .hero .logo {
   height: 30px;
 }
+
 .hero h1 {
   font-size: 70px;
   text-transform: uppercase;
   color: var(--color-dark);
 }
+
 .hero p {
   font-size: 18px;
   color: var(--color-grey);
@@ -52,26 +59,105 @@
 .right-column {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 30px;
 }
 
 main h2 {
+  width: 100%;
   font-size: 20px;
   text-transform: uppercase;
   color: var(--color-dark);
 }
 
 main p {
+  width: 100%;
   font-size: 17px;
   line-height: 1.7em;
   color: var(--color-grey);
 }
 main p a {
   color: var(--color-secondary);
-  text-decoration: none;s
+  text-decoration: none;
 }
 
 /* FOOTER */
 footer.container {
   padding-top: 0;
+}
+
+.container .socials {
+  display: flex;
+  padding: 15px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-bottom: 1px solid #fff;
+  position: relative;
+}
+.socials > .social {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  color: var(--color-light);
+  border-radius: 50%;
+  font-size: 20px;
+  text-align: center;
+  line-height: 44px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.socials > .social:hover {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+}
+
+.back-to-top {
+  position: absolute;
+  top: -26px;
+  right: -12px;
+}
+
+footer.container > .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fffa;
+  font-size: 17px;
+  line-height: 1.7em;
+}
+.footer-logo {
+  margin: 30px 0;
+}
+.triple {
+  display: flex;
+  gap: 0 30px;
+}
+.triple > p {
+  position: relative;
+}
+.triple > p + p::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translateY(-50%);
+}
+footer > .row a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .triple {
+    flex-direction: column;
+  }
+  .triple > p + p::before {
+    display: none;
+  }
 }
