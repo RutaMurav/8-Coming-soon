@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RutaMurav/8-Coming-soon.git"
+    "url": "git+https://github.com/front-end-by-rimantas/27-grupe-coming-soon.git"
   },
-  "author": "Ruta Muravjova",
-  "license": "ISC",
+  "author": "Rimantas Belovas",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RutaMurav/8-Coming-soon/issues"
+    "url": "https://github.com/front-end-by-rimantas/27-grupe-coming-soon/issues"
   },
-  "homepage": "https://github.com/RutaMurav/8-Coming-soon#readme",
+  "homepage": "https://github.com/front-end-by-rimantas/27-grupe-coming-soon#readme",
   "dependencies": {
     "live-server": "^1.2.1"
   }
